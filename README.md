@@ -1,4 +1,4 @@
-# WebGL ASCII Shader Effect
+#Next.js hero section with animated rotating object in ASCII style
 
 A beautiful Next.js project boilerplate with a hero page WebGL demo featuring a 3D GLTF model rendered with React Three Fiber and post-processed into an animated ASCII art effect using custom shaders.
 
