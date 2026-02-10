@@ -4,11 +4,11 @@ A beautiful next.js porject boilerplate with a hero page WebGL demo featuring a 
 
 ## Features
 
-- 🎨 **Real-time ASCII conversion** - Custom GLSL shader converts 3D scene to ASCII art
-- 🎭 **Interactive 3D model** - Drag to rotate, hover to zoom
-- ✨ **Post-processing effects** - CRT-style scanlines, vignette, and glow effects
-- 🎯 **Mouse-reactive** - Mouse position affects glow and visual effects
-- 📱 **Responsive** - Works on desktop and mobile devices
+- **Real-time ASCII conversion** - Custom GLSL shader converts 3D scene to ASCII art
+- **Interactive 3D model** - Drag to rotate, hover to zoom
+- **Post-processing effects** - CRT-style scanlines, vignette, and glow effects
+- **Mouse-reactive** - Mouse position affects glow and visual effects
+- **Responsive** - Works on desktop and mobile devices
 
 ## Tech Stack
 
