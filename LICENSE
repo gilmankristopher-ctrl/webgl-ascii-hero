@@ -24,6 +24,5 @@ SOFTWARE.
 
 **Note on Third-Party Assets:**
 
-The Duck.glb model included in `public/models/Duck.glb` is NOT covered by this MIT License.
-It is copyrighted by Sony Computer Entertainment Inc. (2006) and licensed under the
-SCEA Shared Source License, Version 1.0. See the README.md for more information.
+The `user-model.glb` file included in `public/models/user-model.glb` is for demonstration purposes only.
+Users should replace it with their own 3D model. See the README.md for more information.

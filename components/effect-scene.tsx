@@ -8,8 +8,8 @@ import { Environment, OrbitControls, useGLTF } from "@react-three/drei"
 import { Group, Mesh, MeshStandardMaterial, Vector2 } from "three"
 import { AsciiEffect } from "./ascii-effect"
 
-function Tiger(props: ComponentPropsWithoutRef<"group">) {
-  const { scene } = useGLTF("/models/tiger.glb")
+function UserModel(props: ComponentPropsWithoutRef<"group">) {
+  const { scene } = useGLTF("/models/user-model.glb")
 
   const basicMat = useMemo(
     () =>
@@ -55,7 +55,7 @@ function Tiger(props: ComponentPropsWithoutRef<"group">) {
   return <primitive object={scene} {...props} />
 }
 
-useGLTF.preload("/models/tiger.glb")
+useGLTF.preload("/models/user-model.glb")
 
 const AUTO_ROTATE_SPEED = 0.4
 const HOVER_SPIN_MULTIPLIER = 2
@@ -65,7 +65,7 @@ const TILT_LEFT = -0.08
 const CAMERA_BASE_Z = 4.5
 const CAMERA_ZOOMED_Z = CAMERA_BASE_Z / 1.1
 
-function DraggableTiger({ isHovered = false }: { isHovered?: boolean }) {
+function DraggableUserModel({ isHovered = false }: { isHovered?: boolean }) {
   const groupRef = useRef<Group>(null)
   const [rotation, setRotation] = useState({ x: 0, y: 0 })
   const isDragging = useRef(false)
@@ -121,7 +121,7 @@ function DraggableTiger({ isHovered = false }: { isHovered?: boolean }) {
 
   return (
     <group ref={groupRef} position={[0, -0.8, 0]}>
-      <Tiger scale={3} />
+      <UserModel scale={3} />
     </group>
   )
 }
@@ -180,7 +180,7 @@ function SceneWithDelayedComposer({
       <directionalLight position={[-2, 1.5, 4]} intensity={0.35} />
       <CameraHoverZoom isHovered={isHovered} />
       <Suspense fallback={null}>
-        <DraggableTiger isHovered={isHovered} />
+        <DraggableUserModel isHovered={isHovered} />
       </Suspense>
       <OrbitControls enableRotate={false} enableZoom={enableZoom} enablePan={false} />
       {composerReady && (

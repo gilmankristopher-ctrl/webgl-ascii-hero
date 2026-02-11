@@ -56,14 +56,14 @@ webgl-ascii-hero/
 │   └── ascii-effect.tsx # ASCII post-processing shader
 └── public/
     └── models/
-        └── tiger.glb   # 3D model (GLTF format) - DEMO ONLY, replace with your own
+        └── user-model.glb   # 3D model (GLTF format) - DEMO ONLY, replace with your own
 ```
 
 ## Customization
 
 ### Adding Your Own 3D Model
 
-⚠️ **Important:** The included `tiger.glb` model is for **demonstration purposes only**. Please remove it and use your own model.
+⚠️ **Important:** The included `user-model.glb` model is for **demonstration purposes only**. Please remove it and use your own model.
 
 **Steps to add your own model:**
 
@@ -73,26 +73,19 @@ webgl-ascii-hero/
    - [glTF Sample Models](https://github.com/KhronosGroup/glTF-Sample-Models) - Various licenses
    - Or create your own using Blender, Maya, etc.
 
-2. **Place your model** in the `public/models/` folder:
+2. **Replace the demo model** with your own GLB file:
    ```bash
-   # Remove the demo model
-   rm public/models/tiger.glb
-   
-   # Add your own GLB file
-   # Place your model.glb file in public/models/
+   # Simply replace the demo file with your own model
+   # Make sure your file is named "user-model.glb" and placed in public/models/
+   # The code already references "/models/user-model.glb", so no code changes needed!
    ```
 
-3. **Update the model path** in `components/effect-scene.tsx` (line 12):
+3. **Adjust the scale** if needed in `components/effect-scene.tsx` (line 124):
    ```tsx
-   const { scene } = useGLTF("/models/your-model.glb")
+   <UserModel scale={8} />  // Change the number to adjust size
    ```
 
-4. **Adjust the scale** if needed in `components/effect-scene.tsx` (line 124):
-   ```tsx
-   <Tiger scale={8} />  // Change the number to adjust size
-   ```
-
-5. **Update the component name** from `Tiger` to match your model (optional, for clarity).
+4. **Update the component name** from `UserModel` to match your model (optional, for clarity).
 
 ### Adjust ASCII Effect
 
