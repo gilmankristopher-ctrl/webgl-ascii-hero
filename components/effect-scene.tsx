@@ -121,7 +121,7 @@ function DraggableUserModel({ isHovered = false }: { isHovered?: boolean }) {
 
   return (
     <group ref={groupRef} position={[0, -0.8, 0]}>
-      <UserModel scale={3} />
+      <UserModel scale={50} />
     </group>
   )
 }
